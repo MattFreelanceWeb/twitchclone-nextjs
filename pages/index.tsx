@@ -18,7 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=" flex flex-col text-3xl h-screen overflow-y-auto z-0">   
+      <main className=" ">   
           <Games />
       </main>
     </>
