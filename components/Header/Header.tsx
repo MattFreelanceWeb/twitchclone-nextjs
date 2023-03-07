@@ -32,7 +32,7 @@ function Header({}: Props) {
                 </li>
             </ul>
         </nav>
-        <div className=' fixed top-0 right-2 cursor-pointer h-16 w-16 flex items-center justify-center'>
+        <div className=' fixed top-0 right-2 cursor-pointer h-16 w-16 flex items-center justify-center md:hidden'>
              <span className='text-4xl text-white'><IonIcon name='menu' /></span>
         </div>
     </div>

@@ -30,8 +30,8 @@ function Games({}: Props) {
     }, [getTopGames.apiData]);
 
   return (
-    <div className="  pl-60 pt-20 flex flex-col items-center justify-center z-10" >
-      <h1 className="text-6xl pb-10">Jeux les plus populaires</h1>
+    <div className="   pt-20 flex flex-col items-center justify-center z-10" > {/*pl-60*/ }
+      <h1 className="text-6xl pb-10 text-center">Jeux les plus populaires</h1>
       <div className="flex flex-wrap items-center justify-center gap-4 ">
         {games.map((game, i) => (
           <div key={i} className='shadow-2xl max-w-[250px] h-[460px]  flex flex-col items-center cursor-pointer duration-500 hover:-translate-y-2 relative z-0 rounded-md' >

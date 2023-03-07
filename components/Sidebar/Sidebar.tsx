@@ -13,7 +13,7 @@ function Sidebar({}: Props) {
         </button>
 
         <h2 className='text-[#efebf5] text-lg font-semibold pt-7 px-0 pb-5 z-0' >Chaînes recommandées</h2>
-        <button className={` translate-x-36 ${toggle? 'flex' : 'hidden'} fixed top-20`} onClick={()=>{setToggle(!toggle)}}><span className='text-black '><IonIcon name='chevron-forward' size='large'/></span> </button>
+        <button className={` translate-x-40 ${toggle? 'flex' : 'hidden'} fixed md:top-20 top-96 flex items-center`} onClick={()=>{setToggle(!toggle)}}><span className='text-black '><IonIcon name='chevron-forward' size='large'/></span></button>
     </div>
   )
 }
