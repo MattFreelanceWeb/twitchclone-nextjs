@@ -10,8 +10,6 @@ function Games({}: Props) {
 
   const topGames = getTopGames().getTopGames;
 
-  console.log(topGames.isLoading);
-
   useEffect(() => {
     if (topGames.apiData) {
       let dataArray: any[] = topGames.apiData.data;

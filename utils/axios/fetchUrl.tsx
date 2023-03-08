@@ -15,3 +15,11 @@ export let getTopStreams = () =>{
         getTopStreams
     }
 }
+
+export let getTopUsers = function GetTopUsers(idUrl:string) {
+    const url = `https://api.twitch.tv/helix/users?${idUrl}`
+    const getTopUsers = UseFetchGet({url})
+    return {
+        getTopUsers
+    }
+}

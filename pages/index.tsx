@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Games from "@/components/Games/Games";
-import Sidebar from "@/components/Sidebar/Sidebar";
-import Header from "@/components/Header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,9 +34,6 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff"/>
       </Head>
       <main className="flex  flex-wrap">
-        <div className="w-60 border-solid border-4 border-black flex-grow">
-
-        </div>
           <Games />
       </main>
     </>
