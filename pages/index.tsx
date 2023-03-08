@@ -33,8 +33,8 @@ export default function Home() {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
         <meta name="theme-color" content="#ffffff"/>
       </Head>
-      <main className="flex  flex-wrap">
-          <Games />
+      <main className="flex  flex-wrap items-center justify-center h-screen">
+        <h1 className="text-6xl">Welcome to my awesome twitch Clone do you like it ? </h1>
       </main>
     </>
   );

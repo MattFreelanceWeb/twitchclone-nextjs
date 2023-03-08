@@ -11,12 +11,8 @@ function Sidebar({}: Props) {
   const [idUrl, setIdUrl] = useState("");
   const [sideBarInfo, setSideBarInfo] = useState<any[]>([]);
 
-  console.log(sideBarInfo);
-
   const topStreams = getTopStreams();
   const dataStreams: any = topStreams.getTopStreams.apiData;
-
-  console.log();
 
   const topUsers = getTopUsers(idUrl);
   const dataUsers: any = topUsers.getTopUsers.apiData;
