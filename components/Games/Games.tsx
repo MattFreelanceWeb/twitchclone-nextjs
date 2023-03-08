@@ -10,7 +10,7 @@ function Games({}: Props) {
 
   const topGames = getTopGames().getTopGames;
 
-  console.log(topGames.isLoading)
+  console.log(topGames.isLoading);
 
   useEffect(() => {
     if (topGames.apiData) {
@@ -35,17 +35,18 @@ function Games({}: Props) {
       {/*pl-60*/}
       <h1 className="text-6xl pb-10 text-center">Jeux les plus populaires</h1>
       <div className="flex flex-wrap items-center justify-center gap-4 ">
-        {topGames.isLoading &&( 
-        <>
-        <LoadingCards/>
-        <LoadingCards/>
-        <LoadingCards/>
-        <LoadingCards/>
-        <LoadingCards/>
-        <LoadingCards/>
-        <LoadingCards/>
-        <LoadingCards/>
-        </>
+        {topGames.isLoading && (
+
+          <>
+            <LoadingCards />
+            <LoadingCards />
+            <LoadingCards />
+            <LoadingCards />
+            <LoadingCards />
+            <LoadingCards />
+            <LoadingCards />
+            <LoadingCards />
+          </>
         )}
         {games.map((game, i) => (
           <div
