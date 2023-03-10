@@ -16,10 +16,10 @@ function Header({}: Props) {
               </span>
             </Link>
           </li>
-          <li className="py-0 px-5 w-32">
+          <li className="py-2 px-5 w-48 font-semibold text-xl hover:bg-[#19171c] rounded-lg duration-200 mx-4">
             <Link href="/topGames">Top Games</Link>
           </li>
-          <li className="py-0 px-5 w-32">
+          <li className="py-2 px-5 w-48 font-semibold text-xl hover:bg-[#19171c] rounded-lg duration-200 mx-4">
             <Link href="/topStreams">Top Streams</Link>
           </li>
           <li className=" px-5 mx-auto flex-shrink flex items-center justify-center h-16 w-full ">
