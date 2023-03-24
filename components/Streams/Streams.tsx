@@ -1,5 +1,6 @@
 import { getTopStreams, getTopUsers } from "@/utils/axios/fetchUrl";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import LoadingStreamsInfo from "./LoadingStreamsInfo";
 
@@ -15,7 +16,9 @@ function Streams({}: Props) {
   const topUsers = getTopUsers(idUrl);
   const dataUsers: any = topUsers.getTopUsers.apiData;
 
-  console.log(topStreams);
+  
+  const router = useRouter()
+
   useEffect(() => {
     if (dataStreams) {
       let data: any[] = dataStreams.data;
@@ -76,7 +79,7 @@ function Streams({}: Props) {
             <div key={i} className="bg-[#19171c]">
               <div
                 onClick={() => {
-                  console.log("hello");
+                  router.push(`live/${channel.user_login}`);
                 }}
                 className="shadow-2xl w-[320px] h-72 flex flex-col items-center justify-center cursor-pointer duration-500 hover:translate-x-2 hover:-translate-y-2 relative z-0  bg-white"
               >

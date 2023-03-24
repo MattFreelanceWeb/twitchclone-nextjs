@@ -23,3 +23,11 @@ export let getTopUsers = function GetTopUsers(idUrl:string) {
         getTopUsers
     }
 }
+
+export let getGamesFrom = function GetGameFrom(idUrl:string | string[] | undefined) {
+    const url = `https://api.twitch.tv/helix/streams?game_id=${idUrl}`
+    const getGamesFrom = UseFetchGet({url})
+    return{
+        getGamesFrom
+    }
+}

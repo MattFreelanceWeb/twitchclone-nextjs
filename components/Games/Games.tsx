@@ -1,5 +1,6 @@
 import { getTopGames } from "@/utils/axios/fetchUrl";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import LoadingCards from "./LoadingCards";
 
@@ -9,6 +10,7 @@ function Games({}: Props) {
   const [games, setGames] = useState<any[]>([]);
 
   const topGames = getTopGames().getTopGames;
+
 
   useEffect(() => {
     if (topGames.apiData) {
@@ -47,7 +49,7 @@ function Games({}: Props) {
           </>
         )}
         {games.map((game, i) => (
-          <div
+          <Link href={`game/${game.name}/${game.id}`}
             onClick={() => {
               console.log("hello");
             }}
@@ -74,7 +76,7 @@ function Games({}: Props) {
                 regarder
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

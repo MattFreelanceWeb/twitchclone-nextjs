@@ -3,6 +3,7 @@ import IonIcon from "@reacticons/ionicons";
 import { getTopStreams, getTopUsers } from "@/utils/axios/fetchUrl";
 import Image from "next/image";
 import LoadingStreamerInfo from "./LoadingStreamerInfo";
+import { useRouter } from "next/router";
 
 type Props = {};
 
@@ -16,6 +17,8 @@ function Sidebar({}: Props) {
 
   const topUsers = getTopUsers(idUrl);
   const dataUsers: any = topUsers.getTopUsers.apiData;
+
+  const router = useRouter()
 
   useEffect(() => {
     if (dataStreams) {
@@ -48,7 +51,7 @@ function Sidebar({}: Props) {
 
   return (
     <div
-      className={`fixed w-80 bg-[#19171c] h-screen flex flex-col items-center duration-500 ${
+      className={`fixed top-0 w-80 bg-[#19171c] h-screen flex flex-col items-center duration-500 ${
         toggle ? "-translate-x-80" : "translate-x-0"
       } z-40 `}
     >
@@ -69,12 +72,12 @@ function Sidebar({}: Props) {
       <button
         className={` translate-x-48 ${
           toggle ? "flex" : "hidden"
-        } fixed md:top-20 top-96 flex items-center`}
+        } fixed md:top-20 top-96 flex items-center z-50 bg-black text-white p-4 opacity-20 hover:opacity-100 duration-300 rounded-r-full`}
         onClick={() => {
           setToggle(!toggle);
         }}
       >
-        <span className="text-black ">
+        <span className=" ">
           <IonIcon name="chevron-forward" size="large" />
         </span>
       </button>
@@ -97,6 +100,7 @@ function Sidebar({}: Props) {
           <li
             key={i}
             className="flex items-center gap-4 text-white cursor-pointer"
+            onClick={()=>{router.push(`/live/${stream.user_login}`)}}
           >
             <div className="relative">
               <Image
